@@ -1,10 +1,7 @@
-#!/bin/bash
 
-# Kira Bot Auto Restart Script
-# المطور: 𝐚𝐲𝐦𝐚𝐧
 
-echo "🚀 Starting Kira Bot..."
-echo "المطور: 𝐚𝐲𝐦𝐚𝐧 | البوت: 𝐤𝐢𝐫𝐚"
+echo "🚀 Starting AKILOS Bot..."
+echo "المطور: NOBODY | البوت: AKILOS"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 while true; do

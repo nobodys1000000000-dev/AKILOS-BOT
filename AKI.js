@@ -5,14 +5,7 @@ const semver = require("semver");
 const logger = require("./utils/log");
 const express = require("express");
 const gradient = require("gradient-string")
-const logo = `
-██╗  ██╗ ██╗ ██████╗   ██╗  
-██║ ██╔╝ ██║ ██╔══██╗ ███║  
-█████╔╝  ██║ ██████╔╝ ╚██║  
-██╔═██╗  ██║ ██╔══██╗  ██║  
-██║  ██╗ ██║ ██║  ██║  ██║  
-╚═╝  ╚═╝ ╚═╝ ╚═╝  ╚═╝  ╚═╝  
-`;
+
 const c = ["cyan", "#7D053F"];
 const redToGreen = gradient("red", "cyan");
 console.log(redToGreen("━".repeat(50), { interpolation: "hsv" }));
@@ -25,7 +18,7 @@ console.log(redToGreen("━".repeat(50), { interpolation: "hsv" }));
 const app = express();
 const port = process.env.PORT || 3078; 
 app.get("/", (req, res) => {
-  res.send(`Hello im KIRA Bot..🤖`);
+  res.send(`Hello im AKI Bot..🤖`);
 });
 
 function startBot(message) {
@@ -51,7 +44,7 @@ function startBot(message) {
 };
 
 
-  logger('KIRA BOT', "[ NAME ]");
+  logger('AKI BOT', "[ NAME ]");
   logger("Version: 1.2.14", "[ VERSION ]");
 
 

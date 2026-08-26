@@ -1,8 +1,8 @@
 module.exports.config = {
-  name: "ضيفي",
+  name: "ضيف",
   version: "2.6.0",
   hasPermssion: 2, // للمطور والأدمن فقط حسب إعدادات بوتك
-  credits: "ايمن",
+  credits: "لاأحد",
   description: "إضافة مستخدم عبر الرابط أو الرد (للمطور فقط)",
   commandCategory: "developer",
   usages: "ضيفي [رابط الحساب] أو بالرد على رسالة بها رابط",
@@ -29,7 +29,7 @@ module.exports.run = async function({ api, event, args }) {
   }
 
   if (!input) {
-    return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\nيرجى وضع رابط حساب الشخص أو الرد على رسالته.", threadID, messageID);
+    return api.sendMessage("⌬ ━━ Aki ━━ ⌬\n\nيرجى وضع رابط حساب الشخص أو الرد على رسالته.", threadID, messageID);
   }
 
   api.setMessageReaction("⌛", messageID, () => {}, true);

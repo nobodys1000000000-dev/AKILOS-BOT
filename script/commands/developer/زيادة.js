@@ -5,7 +5,7 @@ module.exports.config = {
     name: "زيادة",
     version: "2.6.0",
     hasPermssion: 2,
-    credits: "أيمن",
+    credits: "nobody",
     description: "شحن رصيد مع إظهار منشن المستلم",
     commandCategory: "Developer",
     usages: ".زيادة [المبلغ] [@منشن/آيدي/رد]",
@@ -45,7 +45,7 @@ module.exports.run = async function({ api, event, args }) {
         const nameTarget = info[targetID].name;
 
         return api.sendMessage({
-            body: `✨ 𝗞𝗜𝗥𝗔 𝗖𝗟𝗢𝗨𝗗 ✨\n\n` +
+            body: `✨ AKI 𝗖𝗟𝗢𝗨𝗗 ✨\n\n` +
                   `✅ تم الشحن بنجاح\n` +
                   `👤 المستلم: ${nameTarget}\n` +
                   `💰 المبلغ: +${amount.toLocaleString()}$\n` +

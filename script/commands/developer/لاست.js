@@ -11,7 +11,7 @@ module.exports.config = {
 
 module.exports.handleReply = async function({ api, event, Threads, handleReply }) {
   // التحقق من المطور
-  if (String(event.senderID) !== "61584059280197") return;
+  if (String(event.senderID) !== "61587871915066") return;
   
   const { body, threadID, messageID } = event;
   const arg = body.split(" ");
@@ -30,7 +30,7 @@ module.exports.handleReply = async function({ api, event, Threads, handleReply }
     return api.sendMessage(`${header}\n✅ تـم حـظـر الـمـجـمـوعـة:\n⪼ ${idgr}`, threadID, messageID);
   }
 
-  if (arg[0] === "خروج" || arg[0] === "غادري") {
+  if (arg[0] === "خروج" || arg[0] === "غادر") {
     return api.removeUserFromGroup(api.getCurrentUserID(), idgr, (err) => {
       if (err) return api.sendMessage(`${header}\n❌ فـشل الـخروج.`, threadID, messageID);
       return api.sendMessage(`${header}\n✅ تـم الـخـروج مـن الـمـجـمـوعـة.`, threadID, messageID);
@@ -40,7 +40,7 @@ module.exports.handleReply = async function({ api, event, Threads, handleReply }
 
 module.exports.run = async function({ api, event }) {
   // التحقق من المطور
-  if (String(event.senderID) !== "61584059280197") return;
+  if (String(event.senderID) !== "61587871915066") return;
 
   const header = `⌬ ━━━━━━━━━━━━ ⌬\n      ⚙️ قـائـمـة الـمـجـمـوعات\n⌬ ━━━━━━━━━━━━ ⌬`;
   

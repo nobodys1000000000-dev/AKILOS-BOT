@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "لاست",
   version: "1.1.2",
-  credits: "Anas",
+  credits: "nobody",
   hasPermssion: 2,
   description: "عرض المجموعات والتحكم بها",
   commandCategory: "developer",

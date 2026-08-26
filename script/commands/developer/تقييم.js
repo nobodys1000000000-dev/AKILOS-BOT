@@ -6,7 +6,7 @@ module.exports.config = {
   name: "تيست",
   version: "2.0.0",
   hasPermssion: 1,
-  credits: "ايمن",
+  credits: "nobody",
   description: "رفع الأكواد وتجربتها برمجياً",
   commandCategory: "developer",
   usages: "[كود] أو [تنفيذ]",
@@ -25,7 +25,7 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
   // --- الحالة الأولى: تنفيذ الكود المرفوع مسبقاً ---
   if (args[0] === "تنفيذ") {
     if (!fs.existsSync(tempPath)) {
-      return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\n❌ لا يوجد كود مرفوع لتنفيذه. ارفع الكود أولاً.", threadID, messageID);
+      return api.sendMessage("⌬ ━━ AKI ━━ ⌬\n\n❌ لا يوجد كود مرفوع لتنفيذه. ارفع الكود أولاً.", threadID, messageID);
     }
     
     const codeToRun = fs.readFileSync(tempPath, "utf-8");
@@ -34,7 +34,7 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
 
   // --- الحالة الثانية: رفع كود جديد وتجربته ---
   const code = args.join(" ");
-  if (!code) return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\n⚠️ أرسل الكود لرفعه أو اكتب 'تيست تنفيذ'.", threadID, messageID);
+  if (!code) return api.sendMessage("⌬ ━━ AKI ━━ ⌬\n\n⚠️ أرسل الكود لرفعه أو اكتب 'تيست تنفيذ'.", threadID, messageID);
 
   // حفظ الكود في الملف المؤقت للرجوع إليه لاحقاً
   fs.writeFileSync(tempPath, code);
@@ -53,11 +53,11 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
       const output = typeof evalResult !== "string" ? util.inspect(evalResult, { depth: 1 }) : evalResult;
 
       api.setMessageReaction("✅", messageID, () => {}, true);
-      return api.sendMessage(`⌬ ━━ 𝗞𝗜𝗥𝗔 𝗧𝗘𝗦𝗧 ━━ ⌬\n\n🔹 الحالة: ${type}\n✅ النتيجة:\n\n${output}`, threadID, messageID);
+      return api.sendMessage(`⌬ ━━ AKI 𝗧𝗘𝗦𝗧 ━━ ⌬\n\n🔹 الحالة: ${type}\n✅ النتيجة:\n\n${output}`, threadID, messageID);
 
     } catch (error) {
       api.setMessageReaction("❌", messageID, () => {}, true);
-      return api.sendMessage(`⌬ ━━ 𝗞𝗜𝗥𝗔 𝗧𝗘𝗦𝗧 ━━ ⌬\n\n❌ خطأ في البرمجة:\n\n${error.message}`, threadID, messageID);
+      return api.sendMessage(`⌬ ━━ AKI 𝗧𝗘𝗦𝗧 ━━ ⌬\n\n❌ خطأ في البرمجة:\n\n${error.message}`, threadID, messageID);
     }
   }
 };

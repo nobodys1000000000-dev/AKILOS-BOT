@@ -5,17 +5,17 @@
 	"MODEL_API_KEY": "al-3_TKYAQrBNjO_EWrbSMenJqXAH5-jnAa61lesclZSjQ",
 	"iconUnsend": {
 		"status": true,
-		"icon": "😡"
+		"icon": "👤 "
 	},
 	"notiGroup": true,
 	"NOTIFICATION": true,
 	"allowInbox": true,
 	"commandDisabled": [],
 	"eventDisabled": [],
-	"BOTNAME": "SOMI",
-	"PREFIX": ".",
+	"BOTNAME": "AKI",
+	"PREFIX": ".","👤", 
 	"ADMINBOT": [
-		"61584059280197"
+		"61587871915066"
 	],
 	"DATABASE": {
 		"sqlite": {
@@ -51,10 +51,10 @@
 			"مطلوب": "مطلوب"
 		}
 	},
-	"KIRA_CONF": {
-		"dev": "61584059280197",
-		"personality": "بوتة متواضعة",
-		"ayman_msg": "حبيبي أنس! 💖 تحت أمرك يا تاج رأسي",
+	"AKI_CONF": {
+		"dev": "61587871915066",
+		"personality": "بوت متواضع",
+		"ayman_msg": " تحت أمرك",
 		"other_msg": "سؤالك يثبت أن العقل زينة لم تُرزق بها 😏"
 	}
 }

@@ -2,7 +2,7 @@ module.exports.config = {
   name: "فريند",
   version: "2.3.0",
   hasPermssion: 2,
-  credits: "ايمن",
+  credits: "لااحد",
   description: "إدارة قائمة الأصدقاء (حذف، بحث، تنظيف)",
   commandCategory: "developer",
   usages: "فريند [اسم أو بدون]",
@@ -19,7 +19,7 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
 
   if (choice === "الغاء") {
     api.unsendMessage(handleReply.messageID);
-    return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\nتم إلغاء العملية بنجاح.", threadID);
+    return api.sendMessage("⌬ ━━ Aki ━━ ⌬\n\nتم إلغاء العملية بنجاح.", threadID);
   }
 
   // حذف الكل في القائمة المعروضة
@@ -32,7 +32,7 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
         count++;
       } catch (e) { console.log(e) }
     }
-    return api.sendMessage(`⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\n✅ تم تنظيف القائمة وحذف ${count} صديق.`, threadID);
+    return api.sendMessage(`⌬ ━━ Aki ━━ ⌬\n\n✅ تم تنظيف القائمة وحذف ${count} صديق.`, threadID);
   }
 
   // حذف رقم محدد
@@ -44,7 +44,7 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
     try {
       await api.unfriend(uid);
       api.unsendMessage(handleReply.messageID);
-      return api.sendMessage(`⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\n✅ تم حذف الصديق: ${name} بنجاح.`, threadID);
+      return api.sendMessage(`⌬ ━━ AKI ━━ ⌬\n\n✅ تم حذف الصديق: ${name} بنجاح.`, threadID);
     } catch (e) {
       return api.sendMessage("❌ فشل الحذف، قد يكون الحساب معطلاً أساساً.", threadID);
     }
@@ -60,15 +60,15 @@ module.exports.run = async function({ api, event, args }) {
   try {
     const friends = await api.getFriendsList();
     if (!friends || friends.length === 0) {
-        return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\nقائمة الأصدقاء فارغة.", threadID);
+        return api.sendMessage("⌬ ━━ AKI ━━ ⌬\n\nقائمة الأصدقاء فارغة.", threadID);
     }
 
     let search = args.join(" ").toLowerCase();
     let filtered = search ? friends.filter(f => f.fullName.toLowerCase().includes(search)) : friends.slice(0, 20);
 
-    if (filtered.length === 0) return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\nلا توجد نتائج مطابقة لبحثك.", threadID);
+    if (filtered.length === 0) return api.sendMessage("⌬ ━━ AKI ━━ ⌬\n\nلا توجد نتائج مطابقة لبحثك.", threadID);
 
-    let msg = `⌬ ━━ 𝗞𝗜𝗥𝗔 𝗗𝗘𝗩 ━━ ⌬\n\n`;
+    let msg = `⌬ ━━ AKI 𝗗𝗘𝗩 ━━ ⌬\n\n`;
     let uids = [];
     let names = [];
     

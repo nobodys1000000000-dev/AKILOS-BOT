@@ -5,7 +5,7 @@ module.exports.config = {
   name: "داتا",
   version: "1.0.0",
   hasPermssion: 2,
-  credits: "ايمن",
+  credits: "nobody",
   description: "رفع الملفات للجروب المربوط بدون عبارات",
   commandCategory: "developer",
   usages: "داتا",
@@ -13,7 +13,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event }) {
-  const DB_THREAD_ID = "1438595104475963"; // الجروب المربوط
+  const DB_THREAD_ID = ""; // الجروب المربوط
   const dbPath = path.join(process.cwd(), "includes", "database");
   const files = ["threads.json", "users.json", "currencies.json"];
 

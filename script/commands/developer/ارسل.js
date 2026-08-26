@@ -6,7 +6,7 @@ module.exports.config = {
   name: "ارسل",
   version: "1.5.0",
   hasPermssion: 2,
-  credits: "ايمن",
+  credits: "nobody",
   description: "إرسال رسالة جماعية للمجموعات (نص + وسائط)",
   commandCategory: "developer",
   usages: "ارسل [النص] أو بالرد على صورة/فيديو",
@@ -18,12 +18,12 @@ module.exports.run = async function({ api, event, args }) {
 
   // التحقق من المطور
   if (!global.config.ADMINBOT.includes(senderID)) {
-    return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\n⚠️ هذا الأمر مخصص للمطور فقط.", threadID, messageID);
+    return api.sendMessage("⌬ ━━ AKI ━━ ⌬\n\n⚠️ هذا الأمر مخصص للمطور فقط.", threadID, messageID);
   }
 
   let content = args.join(" ");
   if (!content && type !== "message_reply") {
-    return api.sendMessage("⌬ ━━ 𝗞𝗜𝗥𝗔 ━━ ⌬\n\n⚠️ يرجى كتابة نص الرسالة أو الرد على صورة/فيديو.", threadID, messageID);
+    return api.sendMessage("⌬ ━━ AKI ━━ ⌬\n\n⚠️ يرجى كتابة نص الرسالة أو الرد على صورة/فيديو.", threadID, messageID);
   }
 
   api.setMessageReaction("⏳", messageID, () => {}, true);
@@ -54,7 +54,7 @@ module.exports.run = async function({ api, event, args }) {
   for (const id of groupIDs) {
     try {
       let msgObject = { 
-        body: `⌬ ━━ 𝗞𝗜𝗥𝗔 𝗕𝗥𝗢𝗔𝗗𝗖𝗔𝗦𝗧 ━━ ⌬\n\n📢 رسالة من المطور:\n\n${content}` 
+        body: `⌬ ━━ AKI 𝗕𝗥𝗢𝗔𝗗𝗖𝗔𝗦𝗧 ━━ ⌬\n\n📢 رسالة من المطور:\n\n${content}` 
       };
       if (attachmentData.length > 0) msgObject.attachment = attachmentData;
       
@@ -74,5 +74,5 @@ module.exports.run = async function({ api, event, args }) {
   }
 
   api.setMessageReaction("✅", messageID, () => {}, true);
-  return api.sendMessage(`⌬ ━━ 𝗞𝗜𝗥𝗔 𝗗𝗘𝗩 ━━ ⌬\n\n✅ تم الإرسال بنجاح:\n مجموعات: ${count}\n فشل: ${errorCount}`, threadID, messageID);
+  return api.sendMessage(`⌬ ━━ AKI 𝗗𝗘𝗩 ━━ ⌬\n\n✅ تم الإرسال بنجاح:\n مجموعات: ${count}\n فشل: ${errorCount}`, threadID, messageID);
 };

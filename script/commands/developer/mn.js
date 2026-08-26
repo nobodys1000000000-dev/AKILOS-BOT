@@ -6,7 +6,7 @@ module.exports.config = {
   name: "mn",
   version: "1.0.0",
   hasPermssion: 2,
-  credits: "ايمن",
+  credits: "لاأحد",
   description: "عرض كل بيانات data.sqlite",
   commandCategory: "developer",
   usages: "mn",

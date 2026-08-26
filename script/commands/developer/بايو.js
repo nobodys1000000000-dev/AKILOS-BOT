@@ -2,7 +2,7 @@ module.exports.config = {
   name: "بايو",
   version: "1.2.0",
   hasPermssion: 2,
-  credits: "Ayman",
+  credits: "Nobody",
   description: "تغيير السيرة الذاتية (Bio) لحساب البوت",
   commandCategory: "developer",
   usages: "[النص الجديد]",

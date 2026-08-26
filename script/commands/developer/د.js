@@ -3,7 +3,7 @@ module.exports = {
     name: "د",
     version: "1.0.0",
     hasPermssion: 2, // للمطور فقط لضمان أمان البوت
-    author: "Kira AI",
+    author: "AKI AI",
     category: "developer",
     description: "تنفيذ أكواد جافا سكريبت مباشرة",
     guide: { ar: ".د [الكود البرمجي]" }
@@ -29,7 +29,7 @@ module.exports = {
       let output = typeof evaled !== "string" ? require("util").inspect(evaled, { depth: 1 }) : evaled;
 
       return api.sendMessage(
-        `⌬ ━━━ ${bold("KIRA EVAL")} ━━━ ⌬\n\n✅ ${bold("الـنـتـيـجـة:")}\n\n${output}\n\n⌬ ━━━━━━━━━━━━━━ ⌬`,
+        `⌬ ━━━ ${bold("AKI EVAL")} ━━━ ⌬\n\n✅ ${bold("الـنـتـيـجـة:")}\n\n${output}\n\n⌬ ━━━━━━━━━━━━━━ ⌬`,
         threadID,
         messageID
       );

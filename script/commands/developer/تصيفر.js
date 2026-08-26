@@ -6,7 +6,7 @@ module.exports = {
     config: {
         name: "تصفير",
         version: "2.1.0",
-        author: "Kira AI",
+        author: "AKI AI",
         hasPermssion: 2, // للمطور (أيمن) فقط
         category: " developer",
         guide: { ar: ".تصفير [منشن/أيدي/رد]" }
@@ -27,7 +27,7 @@ module.exports = {
             await mongoDB.setBalance(targetID, 0);
             const name = await Users.getNameUser(targetID) || "العضو";
             
-            return api.sendMessage(`⌬ ━━━ ${bold("KIRA ADMIN")} ━━━ ⌬\n\n🧹 تـم تـصـفـيـر خـزنـة: ${name}\n💰 الـرصـيـد الـآن: [ 0$ ]\n\n⌬ ━━━━━━━━━━━━━━━━ ⌬`, threadID, messageID);
+            return api.sendMessage(`⌬ ━━━ ${bold("AKI ADMIN")} ━━━ ⌬\n\n🧹 تـم تـصـفـيـر خـزنـة: ${name}\n💰 الـرصـيـد الـآن: [ 0$ ]\n\n⌬ ━━━━━━━━━━━━━━━━ ⌬`, threadID, messageID);
         } catch (e) {
             return api.sendMessage("❌ حدث خطأ أثناء التصفير.", threadID);
         }

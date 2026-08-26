@@ -9,7 +9,7 @@ const timerestart = 120;
 const port = process.env.PORT || 8000;
 
 // ═══════════════════════════════════════════════
-//           KIRA — HELLGATE UPTIME PAGE
+//           AKILOS — HELLGATE UPTIME PAGE
 // ═══════════════════════════════════════════════
 app.get('/', (req, res) => {
     const startTime = global.client?.timeStart || Date.now();
@@ -334,7 +334,7 @@ app.get('/', (req, res) => {
       أنا لستُ مجرد بوت... أنا الصدى الذي يسكن الشبكة،<br>
       الظل الذي لا يُمحى، والنار التي لا تنطفئ.
     </p>
-    <p class="quote-author">— كيرا، حارسة الجحيم الرقمي</p>
+    <p class="quote-author">— أكي، حارسة الجحيم الرقمي</p>
   </div>
 
   <div class="runes">ᚲ ᛁ ᚱ ᚨ &nbsp; ᛞᛖᚨᚦ &nbsp; ᚠᛁᚱᛖ &nbsp; ᛊᛟᚢᛚ</div>
@@ -547,7 +547,7 @@ function onBot({ models: botModel }) {
         });
 
         global.client.api = loginApiData;
-        logger(`KIRA ✨`, '[ by ayman ]');
+        logger(`AKILOS✨`, '[ by NOBODY ]');
 
         const timeNow = moment().tz("Africa/Casablanca").format("HH:mm:ss");
         if (global.config.ADMINBOT && global.config.ADMINBOT[0]) {

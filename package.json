@@ -1,7 +1,7 @@
 {
-  "name": "kira-bot",
+  "name": "AKI-bot",
   "version": "1.0.0",
-  "description": "Kira Bot - AI Powered Facebook Messenger Bot",
+  "description": "AKI Bot - AI Powered Facebook Messenger Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,13 +12,13 @@
     "bot",
     "facebook",
     "messenger",
-    "kira",
+    "AKI",
     "ai",
     "groq",
     "arabic",
     "llama"
   ],
-  "author": "ayman",
+  "author": "NOBODY",
   "license": "GPL-3.0",
   "dependencies": {
     "@hapi/catbox": "^12.1.1",
